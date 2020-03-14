@@ -1,3 +1,5 @@
+MIT licence https://opensource.org/licenses/MIT
+
 Enhanced version of https://reactjs.org/tutorial/tutorial.html
 with:
 - more explanations / ES6/functional/non-JSX alternatives

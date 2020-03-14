@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Logo from "./Logo";
 
 // (functional means "everything is based on functions")
 // function App()
@@ -56,6 +56,7 @@ function App(props: { name: string }) {
           <li>Oculus</li>
         </ul>
       </div>
+      <Logo />
     </div>
   );
 }
