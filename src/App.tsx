@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Logo from "./Logo";
+import Game from "./Game";
 
 // (functional means "everything is based on functions")
 // function App()
@@ -48,6 +49,9 @@ return (
 function App(props: { name: string }) {
   return (
     <div className="App">
+       { /* Tic-tac-toe from get-started tutorial */}
+       <Game />
+      <hr />
       <div className="shopping-list">
         <h1>Shopping List for {props.name}</h1>
         <ul>

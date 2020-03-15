@@ -4,6 +4,7 @@ Enhanced version of https://reactjs.org/tutorial/tutorial.html
 with:
 - more explanations / ES6/functional/non-JSX alternatives
 - typescript
+- styled components
 - boilerplate for service works, tests, ...
 
 ----
