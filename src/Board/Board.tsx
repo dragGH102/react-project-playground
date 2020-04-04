@@ -20,6 +20,14 @@ class Board extends PureComponent<Props> {
         )
     }
 
+    // this is the same as handleSquareClick() { }
+
+    // but it requires method binding in construcotr
+    // as this.handleSquareClick = this.handleSquareClick.bind(this)
+    handleSquareClick = () => {
+        // TODO
+    };
+
     render() {
         const { title, squares } = this.props;
 

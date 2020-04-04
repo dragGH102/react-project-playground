@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a693f04c-4525-4d8a-b184-8918b9dbd409" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board/Board.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board/Board.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Game.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584198241744</updated>
-      <workItem from="1584198246088" duration="16850000" />
+      <workItem from="1584198246088" duration="18396000" />
     </task>
     <servers />
   </component>

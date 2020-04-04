@@ -49,6 +49,9 @@ class Game extends PureComponent {
         // X starts first!
         xIsNext: true
     };
+    // yet another altarnative to the above, is 'React without ES6'
+    // i.e. using createReactClass which also binds normal class methods
+    // (e.g. func() { } ) without using
 
 
     render() {
