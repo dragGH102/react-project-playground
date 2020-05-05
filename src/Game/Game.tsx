@@ -21,7 +21,8 @@ type State = {
 // they will based on new object reference, i.e. we return a new object from
 // whatever method aims to mutate the states. This way we leverage immutability
 // design principle which prevents awful side effects from mutating objects where we
-// should not)
+// should not.
+// This will also trigger change detection in a pure component without the need to use shouldComponentUpdate
 // .. Actually, Game has no props at all (i.e. stuff coming inTO it)
 class Game extends PureComponent {
 
@@ -49,9 +50,48 @@ class Game extends PureComponent {
         // X starts first!
         xIsNext: true
     };
-    // yet another altarnative to the above, is 'React without ES6'
+    // yet another alternative to the above, is 'React without ES6'
     // i.e. using createReactClass which also binds normal class methods
     // (e.g. func() { } ) without using
+
+    /* function that calculates if the current player is a winner */
+    calculateWinner(squares: Array<0|1|null>) {
+
+        // possible combinations
+        // we look at the progressive value, so it doesn't matter if horizontal/vertical/diagonal line
+        const lines = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+
+        // compare each line of the board
+        for (let i = 0; i < lines.length; i++) {
+
+            // current line
+            const [a, b, c] = lines[i];
+
+            // check if each element in the line has the same value (X/O, i.e. 1 or 0)
+            if (squares[a] !== null && squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+                return squares[a];
+            }
+        }
+        return null;
+
+    }
+
+    // this is the same as handleSquareClick() { }
+
+    // but it requires method binding in constructor
+    // as this.handleSquareClick = this.handleSquareClick.bind(this)
+    handleSquareClick = () => {
+        // TODO
+    };
 
 
     render() {
@@ -63,7 +103,10 @@ class Game extends PureComponent {
 
         return (
             <div>
-                <Board squares={current.squares} />
+                <Board
+                    squares={current.squares}
+                    handleSquareClick={this.handleSquareClick}
+                />
             </div>
         );
 

@@ -7,29 +7,24 @@ import {
 interface Props {
     title: string;
     squares: Array<0|1|null>;
+    handleSquareClick: () => void;
 }
 
 // <Props> is the typescript way to define propTypes
 class Board extends PureComponent<Props> {
 
-    renderSquare(key: number, value: any) {
+    renderSquare(props: { key: number, value: any, onClick: () => void }) {
+        const { key, value, onClick } = props;
+
         return (
-            <Square key={key}>
+            <Square key={key} className="square" onClick={onClick}>
                 { value }
             </Square>
         )
     }
 
-    // this is the same as handleSquareClick() { }
-
-    // but it requires method binding in construcotr
-    // as this.handleSquareClick = this.handleSquareClick.bind(this)
-    handleSquareClick = () => {
-        // TODO
-    };
-
     render() {
-        const { title, squares } = this.props;
+        const { title, squares, handleSquareClick } = this.props;
 
         return (
             <div className="board">
@@ -39,7 +34,11 @@ class Board extends PureComponent<Props> {
                         .map((i) => (
                             <div className="board-row">
                                 {[...Array(3).keys()]
-                                    .map((j) => this.renderSquare((i+1)*(j+1), squares[i]))
+                                    .map((j) => this.renderSquare({
+                                        key: (i+1)*(j+1),
+                                        value: squares[i],
+                                        onClick: handleSquareClick
+                                    }))
                                 }
                             </div>
                         ))
@@ -51,6 +50,7 @@ class Board extends PureComponent<Props> {
 
     // class field
     // This is the typescript way to define defaultProps
+    // title is in fact not provided by the parent component (Game)
     static defaultProps = {
         title: "Board",
     };

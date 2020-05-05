@@ -7,6 +7,12 @@ with:
 - styled components
 - boilerplate for service works, tests, ...
 
+STILL TO DO:
+- store state through redux + sagas
+- integrate a nodejs backend to store winners in database
+- implement socketjs to sync history across multiple clients
+
+
 ----
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
